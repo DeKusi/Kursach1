@@ -1,0 +1,41 @@
+{
+  "airports": [
+    {
+      "name": "Берген ",
+      "flights": [
+        {
+        "plane": {
+          "model": "Boeing 777X ",
+          "type": " 777X ",
+          "service_classes": [
+            "Эконом класс",
+            "Бизнесс класс",
+            "Первый класс "
+          ]
+        },
+          "point_of_departure": "?",
+          "destination": "?",
+          "departure_time": " ",
+          "arrival_time": " "
+          }
+      ]
+    },
+
+    {
+      "name": " ",
+      "flight": [
+        {
+          "plane": {
+            "model": " ",
+            "type": " ",
+            "service_classes": ""
+          },
+          "point_of_departure": "?",
+          "destination": "?",
+          "departure_time": " ",
+          "arrival_time": " "
+        }
+      ]
+    }
+  ]
+}
