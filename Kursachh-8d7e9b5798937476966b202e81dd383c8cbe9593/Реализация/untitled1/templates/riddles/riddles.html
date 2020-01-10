@@ -1,0 +1,44 @@
+
+
+{% extends 'riddles/pattern.html' %}
+{% block title %}
+    Главная
+{% endblock %}
+{% block header %}
+    Заполните форму ниже
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post"> {% csrf_token %}
+      {{ form.as_p }}
+    <div>
+        <button type="submit">Отправить</button>
+    </div>
+    </form>
+
+    {% for word in lol %}
+        <p>
+            {{ word }}
+        </p>
+    {% endfor %}
+
+    {% for plane in planes %}
+        <p>
+          <h3>
+        {{ plane.name }}
+        </h3>
+
+
+            <li>
+            {{ plane.type }}
+            </li>
+
+       <button>
+       <a href=" {% url 'riddles:air_detail_url' plane.id %}">Посмотреть</a>
+       </button>
+        </p>
+
+
+
+    {% endfor %}
+{% endblock %}

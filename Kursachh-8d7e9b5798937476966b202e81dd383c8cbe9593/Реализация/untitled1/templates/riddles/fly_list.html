@@ -1,0 +1,24 @@
+{% extends 'riddles/pattern.html' %}
+
+{% block title %}
+    Flies list
+{% endblock %}
+
+{% block header %}
+    Все рейсы
+{% endblock %}
+
+{% block content %}
+    {% for fly in flys %}
+        <h2>
+        <li>
+            {{ fly.id }}
+            {{ fly.time }}
+            <button>
+                <a href="{% url 'riddles:fly_detail_url' fly.id %}">Глянуть</a>
+            </button>
+        </li>
+
+        </h2>
+    {% endfor %}
+{% endblock %}

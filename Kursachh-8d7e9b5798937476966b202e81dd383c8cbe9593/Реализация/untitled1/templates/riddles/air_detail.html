@@ -1,0 +1,29 @@
+{% extends 'riddles/pattern.html' %}
+
+{% block title %}
+    Аэропорт {{ air.name }} - {{ block.super }}
+{% endblock %}
+
+    {% block header %}
+         Аэропорт {{ air.name }}
+    {% endblock %}
+
+{% block content %}
+    <h3>
+    Расписание:
+    </h3>
+
+    <p>
+    {{ air.type }}
+    {% for fly in air.flys.all %}
+        <li>
+         {{ fly.id }}
+        {{ fly.time }}
+
+        </li>
+
+    {% endfor %}
+
+    </p>
+
+{% endblock %}

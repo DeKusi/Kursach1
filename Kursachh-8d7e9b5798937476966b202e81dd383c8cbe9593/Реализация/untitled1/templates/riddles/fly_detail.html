@@ -1,0 +1,21 @@
+{% extends 'riddles/pattern.html' %}
+{% block title %}
+    Рейс {{ fly.id }}
+{% endblock %}
+{% block header %}
+    Рейс {{ fly.id }}
+{% endblock %}
+{% block content %}
+    <p>
+    Время вылета: {{ fly.time }}
+    {% for plane in fly.planes.all %}
+    <p>
+    <h2>
+    {{ plane.name }}
+    </h2>
+        {{ plane.type }}
+    </p>
+    {% endfor %}
+
+    </p>
+{% endblock %}
